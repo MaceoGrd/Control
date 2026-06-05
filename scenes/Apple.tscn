@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://capple001"]
+
+[ext_resource type="Script" path="res://scripts/apple.gd" id="1_apple"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_apple"]
+radius = 16.0
+
+[node name="Apple" type="RigidBody2D"]
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("1_apple")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_apple")

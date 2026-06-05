@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmain0001"]
+
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_main"]
+[ext_resource type="PackedScene" uid="uid://cplank001" path="res://scenes/Plank.tscn" id="2_plank"]
+[ext_resource type="PackedScene" uid="uid://capple001" path="res://scenes/Apple.tscn" id="3_apple"]
+[ext_resource type="PackedScene" uid="uid://cui00001" path="res://scenes/UI.tscn" id="4_ui"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="Plank" parent="." instance=ExtResource("2_plank")]
+
+[node name="Apple" parent="." instance=ExtResource("3_apple")]
+position = Vector2(360, 292)
+
+[node name="Rocks" type="Node2D" parent="."]
+
+[node name="Birds" type="Node2D" parent="."]
+
+[node name="UI" parent="." instance=ExtResource("4_ui")]
